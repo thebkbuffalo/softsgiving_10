@@ -1,0 +1,34 @@
+#main_header {
+  margin-top: 3em;
+}
+
+.main_header_inner {
+  text-align: center;
+  padding: 10px 8em;
+}
+
+.main_header_inner h1 {
+  margin-bottom: 1em;
+}
+
+.nav {
+  text-align: center;
+  padding: .3em 0;
+}
+
+.guest_header {
+  text-align: center;
+}
+
+#guests_index {
+  text-align: center;
+}
+
+.comments_header {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.comment {
+  text-align: center;
+}

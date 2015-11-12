@@ -1,0 +1,88 @@
+<div id="main_header">
+  <div class="main_header_inner">
+    <h1>WELCOME TO SOFTSGIVING 10 BITCHES!!!!!!!</h1>
+    <p>
+      It's that time of year again
+      When fall gets crunchy and you yen
+      for coziness with an old friend
+      It's almost here... Softsgiving TEN!
+
+      Ten years of food and thanks and softs
+      Ten years of cramming into lofts
+      In Jackson Heights and Avenue B
+      On Meserole and Ellery
+
+      Ten years of breaking laws of space
+      To fit another friendly face
+      into the throes of revelry:
+      Strangers fast become family
+
+      Ten years of sharing gratitudes
+      or even honored platitudes
+      That colored our year's attitude
+      (Or at least just sharing plates of food)
+
+      Much respect to local fames,
+      our hosts at number 13 Thames.
+      Their home sets the stage for our love affair,
+      and we can't wait to see you there.
+
+      You've grown before our very eyes
+      Had babies, weddings, laughs and cries
+      Ups and downs, starts false, starts true
+      We're in awe: there's nothing you can't do!
+
+      So share your tales with us anew
+      After all, Softsgiving celebrates you
+    </p>
+  </div>
+</div>
+<nav class="nav navbar-default navbar-fixed-top">
+  <div id="main_nav_bar">
+    <ul class="nav nav-pills">
+      <a href="/" class="btn btn-default navbar-btn">HOME</a>
+      <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#new_user_modal">JOIN THE PARTY</button>
+      <a href="/comments" class="btn btn-default navbar-btn">SEE WHAT PEOPLE ARE SAYIN'</a>
+    </ul>
+  </div>
+</nav>
+<hr>
+<div class="guest_header">
+  <h1>Look Whose Coming and What They're Bringing</h1>
+</div>
+
+<hr>
+<div id="guests_index">
+  <% @users.each do |user| %>
+    <div class="guest">
+      <h3>Dish:</h3>
+      <h4><%= user.dish %></h4>
+      <h3>Number Of Guests:</h3>
+      <h4><%= user.number_of_guests %></h4>
+      <h3>A Note</h3>
+      <h4><%= user.note %></h4>
+    </div>
+    <hr>
+  <% end %>
+</div>
+
+
+
+<!-- modal for new user form -->
+<div class="modal fade" id="new_user_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">New Guest!</h4>
+      </div>
+      <div class="modal-body">
+        <%= render partial: 'users/form', locals: { user: @user } %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
