@@ -55,6 +55,8 @@
 <div id="guests_index">
   <% @users.each do |user| %>
     <div class="guest">
+      <h3>Who You Is???</h3>
+      <h4><%= user.name %></h4>
       <h3>Dish:</h3>
       <h4><%= user.dish %></h4>
       <h3>Number Of Guests:</h3>

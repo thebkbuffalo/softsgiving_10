@@ -17,6 +17,7 @@
     <div class="comment">
       <h3><%= comment.content %></h3>
       <p>With Love: <%= comment.author %></p>
+      <%= image_tag comment.photo.url(:thumb) %>
     </div>
     <hr>
   <% end %>
