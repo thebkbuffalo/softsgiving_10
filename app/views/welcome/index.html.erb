@@ -61,6 +61,7 @@
       <h4><%= user.number_of_guests %></h4>
       <h3>A Note</h3>
       <h4><%= user.note %></h4>
+      <%= image_tag user.avatar.url(:thumb) %>
     </div>
     <hr>
   <% end %>

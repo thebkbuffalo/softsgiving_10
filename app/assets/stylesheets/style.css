@@ -13,7 +13,12 @@
 
 .nav {
   text-align: center;
-  padding: .3em 0;
+  background: black;
+}
+
+.btn {
+  color: black!important;
+  padding: 5px 20px!important;
 }
 
 .guest_header {
