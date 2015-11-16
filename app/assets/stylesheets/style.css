@@ -6,6 +6,11 @@ body {
   font-size: 1.3em;
 }
 
+.picture {
+  height: 150px;
+  width: 150px;
+}
+
 .intro_txt {
   font-size: 1.5em;
 }
