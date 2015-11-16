@@ -2,6 +2,9 @@ body {
   font-family: 'Old Standard TT', serif!important;
 }
 
+.count {
+  font-size: 1.3em;
+}
 
 .intro_txt {
   font-size: 1.5em;
