@@ -3,7 +3,7 @@
     <ul class="nav nav-pills">
       <!-- <a href="/" class="btn btn-default navbar-btn">HOME</a> -->
       <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#new_user_modal">JOIN THE PARTY</button>
-      <a href="/comments" class="btn btn-default navbar-btn">SEE WHAT PEOPLE ARE SAYIN'(blog/comments/musings)</a>
+      <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#info_modal">INFO/INFORMATION/KNOWLEDGE</button>
     </ul>
   </div>
 </nav>
@@ -46,21 +46,9 @@
       After all, Softsgiving celebrates you
     </h4>
     <hr>
-    <h2>When:</h2>
-    <h4>Saturday, November 21st, 2015</h4>
-    <h4>4PM - ??</h4>
-    <hr>
-    <h2>WHERE:</h2>
-    <h4>13 Thames Street</h4>
-    <h4>Third Floor</h4>
-    <h4>Brooklyn, 11206</h4>
-    <hr>
-    <h2>Questions:</h2>
-    <h4>Reach Ellie at:<br/> <a class="phone" href="tel:202.904.7019">202.904.7019</a></h4>
-    <h4>Reach Drew at:<br/> <a class="phone" href="tel:917.435.0181">917.435.0181</a></h4>
   </div>
 </div>
-<hr>
+
 <div class="guest_header">
   <h1>Look Whose Coming and What They're Bringing</h1>
   <span class="count">Total Count(so far): <%= users_count %></span>
@@ -96,6 +84,36 @@
       </div>
       <div class="modal-body">
         <%= render partial: 'users/form', locals: { user: @user } %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- modal for new user form -->
+<div class="modal fade" id="info_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">INFORMATION</h4>
+      </div>
+      <div class="modal-body">
+        <h2>When:</h2>
+        <h4>Saturday, November 21st, 2015</h4>
+        <h4>4PM - ??</h4>
+        <hr>
+        <h2>WHERE:</h2>
+        <h4>13 Thames Street</h4>
+        <h4>Third Floor</h4>
+        <h4>Brooklyn, 11206</h4>
+        <hr>
+        <h2>Questions:</h2>
+        <h4>Reach Ellie at:<br/> <a class="phone" href="tel:202.904.7019">202.904.7019</a></h4>
+        <h4>Reach Drew at:<br/> <a class="phone" href="tel:917.435.0181">917.435.0181</a></h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
