@@ -15,7 +15,7 @@ body {
 }
 
 #main_header {
-  margin-top: 3em;
+  margin-top: 4.5em;
 }
 
 .main_header_inner {
@@ -37,7 +37,13 @@ body {
   background: black;
 }
 
+.navbar-btn {
+  margin: 15px 10px!important;
+  padding: 10px!important;
+}
+
 .btn {
+  font-size: 20px!important;
   color: black!important;
   padding: 5px 20px!important;
 }
