@@ -48,6 +48,10 @@ body {
   padding: 10px 25px!important;
 }
 
+.info_content {
+  text-align: center;
+}
+
 .guest_header {
   text-align: center;
 }
