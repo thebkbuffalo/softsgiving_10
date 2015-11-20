@@ -27,6 +27,11 @@ body {
   margin-bottom: 1em;
 }
 
+.phone:hover {
+  background: inherit;
+  text-decoration: none;
+}
+
 .nav {
   text-align: center;
   background: black;
