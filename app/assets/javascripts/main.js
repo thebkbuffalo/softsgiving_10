@@ -17,4 +17,11 @@ $(document).ready(function(){
       return false;
     }
   });
+
+  $('#new_user_modal').on("hidden.bs.modal", function(){
+    debugger
+    $('.no_name').hide();
+    $('.u_n').css('color', 'black');
+    $('.u_n_f').css('border', 'none')
+  });
 });
