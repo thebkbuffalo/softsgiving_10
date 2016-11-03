@@ -1,25 +1,26 @@
 <%= form_for User.new do |f| %>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <h3><%= f.label :name, class: 'u_n' %></h3>
+    <%= f.text_field :name, class: 'form-control text_form u_n_f' %>
   </div>
   <div class="field">
-    <%= f.label :dish %><br>
-    <%= f.text_area :dish %>
+    <h3><%= f.label :dish %></h3>
+    <%= f.text_field :dish, class: 'form-control text_form' %>
   </div>
   <div class="field">
-    <%= f.label :number_of_guests %><br>
-    <%= f.number_field :number_of_guests %>
+    <h3><%= f.label :number_of_guests %></h3>
+    <%= f.select :number_of_guests, options_for_select(0..10), {}, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_area :note %>
+    <h3><%= f.label :note %></h3>
+    <%= f.text_field :note, class: 'form-control text_form' %>
   </div>
-  <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+
+  <div class="no_name">
+    <%= image_tag "http://www.killingtime.com/Pegu/wp-content/uploads/2008/12/evil-tom-cap.jpg", class: 'evil_turkey' %>
+    <h4 class="nn_warn"> ...Don't forget your NAME</h4>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Join The Fun', class: 'btn btn-warning user_submit', style: 'color: black;' %>
   </div>
 <% end %>

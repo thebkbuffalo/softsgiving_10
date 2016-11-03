@@ -7,4 +7,14 @@ $(document).ready(function(){
       info.slideUp('fast', function(){});
     }
   });
+
+  $('.user_submit').on('click', function(){
+    $('.no_name').hide();
+    if($('#user_name').val() == ""){
+      $('.no_name').fadeIn('medium', function(){});
+      $('.u_n').css('color', '#8A0707');
+      $('.u_n_f').css('border', '2px solid #8A0707')
+      return false;
+    }
+  });
 });
