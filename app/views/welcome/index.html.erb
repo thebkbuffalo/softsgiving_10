@@ -51,21 +51,25 @@
 <div class="guest_header">
   <h1>Look Whose Coming and What They're Bringing</h1>
   <span class="count">Total Count(so far): <%= users_count %></span>
+  <p>Click Names To Reveal More Info</p>
 </div>
 
 <hr>
 <div id="guests_index">
   <% @users.each do |user| %>
     <div class="guest">
-      <h3>Who You Is???</h3>
-      <h4><%= user.name %></h4>
-      <h3>Dish:</h3>
-      <h4><%= user.dish %></h4>
-      <h3>Number Of Guests:</h3>
-      <h4><%= user.number_of_guests %></h4>
-      <h3>A Note</h3>
-      <h4><%= user.note %></h4>
-      <%= image_tag user.avatar.url(:thumb), class: 'picture' %>
+      <div class="clickable">
+        <h3>Who You Is???</h3>
+        <h4><%= user.name %></h4>
+        <div class="more_info">
+          <h3>Dish:</h3>
+          <h4><%= user.dish %></h4>
+          <h3>Number Of Guests:</h3>
+          <h4><%= user.number_of_guests %></h4>
+          <h3>A Note</h3>
+          <h4><%= user.note %></h4>
+        </div>
+      </div>
     </div>
     <hr>
   <% end %>

@@ -56,6 +56,12 @@ body {
   text-align: center;
 }
 
+.guest_header p {
+  margin-top: 7px;
+  font-size: 15px;
+  color: #a32a2a;
+}
+
 #guests_index {
   text-align: center;
 }
@@ -67,4 +73,16 @@ body {
 
 .comment {
   text-align: center;
+}
+
+.more_info {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  color: #ec7221;
 }
