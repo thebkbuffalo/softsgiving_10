@@ -29,7 +29,7 @@ $(document).ready(function(){
       $(this).css('display', 'none');
     });
     id = '#' + $(this).val();
-    $('html, body').animate({scrollTop: $(id).offset().top}, 300);
+    $('html, body').animate({scrollTop: $(id).offset().top - 100}, 800);
     $(id).trigger('click');
   });
 });

@@ -53,7 +53,7 @@
   <span class="count">Total Count(so far): <%= users_count %></span>
   <p>Click Names To Reveal More Info</p>
 
-  <%= select_tag 'search', options_for_select(@users.sort_by(&:name).map{|u| [u.name, u.id]}), class: 'search_it' %>
+  Search: <%= select_tag 'search', options_for_select([''] + @users.sort_by(&:name).map{|u| [u.name, u.id]}), class: 'search_it' %>
 </div>
 
 <hr>
