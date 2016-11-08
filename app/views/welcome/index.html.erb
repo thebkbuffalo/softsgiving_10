@@ -52,13 +52,15 @@
   <h1>Look Whose Coming and What They're Bringing</h1>
   <span class="count">Total Count(so far): <%= users_count %></span>
   <p>Click Names To Reveal More Info</p>
+
+  <%= select_tag 'search', options_for_select(@users.sort_by(&:name).map{|u| [u.name, u.id]}), class: 'search_it' %>
 </div>
 
 <hr>
 <div id="guests_index">
   <% @users.each do |user| %>
     <div class="guest">
-      <div class="clickable">
+      <div class="clickable" id="<%= user.id %>">
         <h3><i class="fa fa-hand-spock-o" aria-hidden="true"></i> YOUR NAME <i class="fa fa-hand-spock-o fa-flip-horizontal" aria-hidden="true"></i></h3>
         <h4><%= user.name %></h4>
         <div class="more_info">

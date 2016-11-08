@@ -19,9 +19,17 @@ $(document).ready(function(){
   });
 
   $('#new_user_modal').on("hidden.bs.modal", function(){
-    debugger
     $('.no_name').hide();
     $('.u_n').css('color', 'black');
     $('.u_n_f').css('border', 'none')
+  });
+
+  $('.search_it').on('change', function(){
+    $.each($('.more_info'), function(i, v){
+      $(this).css('display', 'none');
+    });
+    id = '#' + $(this).val();
+    $('html, body').animate({scrollTop: $(id).offset().top}, 300);
+    $(id).trigger('click');
   });
 });
