@@ -32,4 +32,9 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop: $(id).offset().top - 100}, 800);
     $(id).trigger('click');
   });
+
+  $('.sort_it').on('change', function(){
+    params = $(this).val();
+    window.location = '/?sort=' + params
+  });
 });

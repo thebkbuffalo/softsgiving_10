@@ -52,8 +52,8 @@
   <h1>Look Whose Coming and What They're Bringing</h1>
   <span class="count">Total Count(so far): <%= users_count %></span>
   <p>Click Names To Reveal More Info</p>
-
   Search: <%= select_tag 'search', options_for_select([''] + @users.sort_by(&:name).map{|u| [u.name, u.id]}), class: 'search_it' %>
+  <span class="sort_sect">Sort By: <%= select_tag 'sort', options_for_select(['', ['Name', 'name'], ['Date Added', 'date']]), class: 'sort_it' %></span>
 </div>
 
 <hr>
@@ -61,8 +61,7 @@
   <% @users.each do |user| %>
     <div class="guest">
       <div class="clickable" id="<%= user.id %>">
-        <h3><i class="fa fa-hand-spock-o" aria-hidden="true"></i> YOUR NAME <i class="fa fa-hand-spock-o fa-flip-horizontal" aria-hidden="true"></i></h3>
-        <h4><%= user.name %></h4>
+        <h3><i class="fa fa-hand-spock-o" aria-hidden="true"></i>  <%= user.name %>  <i class="fa fa-hand-spock-o fa-flip-horizontal" aria-hidden="true"></i></h3>
         <div class="more_info">
           <h3>Dish:</h3>
           <h4><%= user.dish %></h4>
