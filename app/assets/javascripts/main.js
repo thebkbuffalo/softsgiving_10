@@ -3,8 +3,12 @@ $(document).ready(function(){
     var info = $(this).find('.more_info');
     if(info.css('display') == 'none'){
       info.slideDown('fast', function(){});
+      info.css('color', '#EB712F');
+      info.parent().css('color', '#EB712F');
     }else{
       info.slideUp('fast', function(){});
+      info.css('color', 'black');
+      info.parent().css('color', 'black');
     }
   });
 
@@ -27,6 +31,8 @@ $(document).ready(function(){
   $('.search_it').on('change', function(){
     $.each($('.more_info'), function(i, v){
       $(this).css('display', 'none');
+      $(this).css('color', 'black');
+      $(this).parent().css('color', 'black');
     });
     id = '#' + $(this).val();
     $('html, body').animate({scrollTop: $(id).offset().top - 100}, 800);
